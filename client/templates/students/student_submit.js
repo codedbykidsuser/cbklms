@@ -12,7 +12,11 @@ Template.studentSubmit.events({
 
     Meteor.call('studentInsert', student, function(error, result) {
       if (error)
-        return alert(error.reason);
+        return throwError(error.reason);
+
+      if (result.studentExists)
+        throwError('This Student Already Exists');
+      
       Router.go('studentPage', {_id: result._id});
     });
   }

@@ -14,7 +14,7 @@ Template.studentEdit.events({
 
     Students.update(currentStudentId, {$set: studentProperties}, function(error) {
       if (error) {
-        alert(error.reason);
+        throwError(error.reason);
       } else {
         Router.go('studentPage', {_id: currentStudentId});
       }

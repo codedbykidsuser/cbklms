@@ -18,7 +18,11 @@ Template.studentSubmit.events({
       first_name: $(e.target).find('[name=first_name]').val(),
       last_name: $(e.target).find('[name=last_name]').val(),
       level: $(e.target).find('[name=level]').val(),
+      program: $(e.target).find('[name=program]').val(),
+      type: $(e.target).find('[name=type]').val(),  
       dob: $(e.target).find('[name=dob]').val(),
+      elm_school: $(e.target).find('[name=elm_school]').val(),
+      high_school: $(e.target).find('[name=high_school]').val(),
       reg_packet: $(e.target).find('[name=reg_packet]').val()
     };
 
